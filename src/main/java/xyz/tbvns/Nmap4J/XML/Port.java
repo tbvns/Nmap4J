@@ -1,4 +1,4 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
@@ -18,14 +18,14 @@ public class Port {
     public Integer portid;
 
     @JacksonXmlProperty(localName = "state")
-    public State state;
+    public xyz.tbvns.Nmap4J.XML.State state;
 
     @JacksonXmlProperty(localName = "service")
-    public Service service;
+    public xyz.tbvns.Nmap4J.XML.Service service;
 
     // Nmap scripts can have varied output, often within <script> tags.
     // We'll use a List<Script> to capture these.
     @JacksonXmlElementWrapper(useWrapping = false) // Don't wrap multiple <script> elements
     @JacksonXmlProperty(localName = "script")
-    public List<Script> scripts;
+    public List<xyz.tbvns.Nmap4J.XML.Script> scripts;
 }

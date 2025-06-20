@@ -1,19 +1,19 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 /**
- * POJO for the 'times' element.
+ * POJO for 'state' element within a port.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Times {
+public class State {
     @JacksonXmlProperty(isAttribute = true)
-    public Long srtt;
+    public String state;
 
     @JacksonXmlProperty(isAttribute = true)
-    public Long rttvar;
+    public String reason;
 
     @JacksonXmlProperty(isAttribute = true)
-    public Long to;
+    public Integer reason_ttl;
 }

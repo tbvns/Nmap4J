@@ -1,21 +1,19 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
-import java.util.Optional;
-
 /**
- * POJO for 'taskbegin' and 'taskend' elements.
+ * POJO for 'portused' element within os.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Task {
+public class PortUsed {
     @JacksonXmlProperty(isAttribute = true)
-    public String task;
+    public String state;
 
     @JacksonXmlProperty(isAttribute = true)
-    public Long time;
+    public String proto;
 
     @JacksonXmlProperty(isAttribute = true)
-    public Optional<String> extrainfo; // 'extrainfo' might be optional
+    public Integer portid;
 }

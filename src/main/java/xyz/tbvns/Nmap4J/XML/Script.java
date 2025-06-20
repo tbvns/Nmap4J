@@ -1,4 +1,4 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
@@ -26,5 +26,5 @@ public class Script {
 
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "elem")
-    public List<ScriptElem> elems;
+    public List<xyz.tbvns.Nmap4J.XML.ScriptElem> elems;
 }

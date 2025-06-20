@@ -1,13 +1,16 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 /**
- * POJO for 'debugging' element.
+ * POJO for the 'uptime' element.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Debugging {
+public class Uptime {
     @JacksonXmlProperty(isAttribute = true)
-    public Integer level;
+    public Long seconds;
+
+    @JacksonXmlProperty(isAttribute = true)
+    public String lastboot;
 }

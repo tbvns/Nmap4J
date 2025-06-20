@@ -1,22 +1,28 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 /**
- * POJO for the 'scaninfo' element.
+ * POJO for 'osclass' element within osmatch.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ScanInfo {
+public class OsClass {
     @JacksonXmlProperty(isAttribute = true)
     public String type;
 
     @JacksonXmlProperty(isAttribute = true)
-    public String protocol;
+    public String vendor;
 
     @JacksonXmlProperty(isAttribute = true)
-    public Integer numservices;
+    public String osfamily;
 
     @JacksonXmlProperty(isAttribute = true)
-    public String services;
+    public String osgen;
+
+    @JacksonXmlProperty(isAttribute = true)
+    public Integer accuracy;
+
+    @JacksonXmlProperty(localName = "cpe")
+    public String cpe;
 }

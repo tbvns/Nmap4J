@@ -1,25 +1,21 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
+import java.util.Optional;
+
 /**
- * POJO for 'finished' element within runstats.
+ * POJO for the 'address' element.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Finished {
+public class Address {
     @JacksonXmlProperty(isAttribute = true)
-    public Long time;
+    public String addr;
 
     @JacksonXmlProperty(isAttribute = true)
-    public String timestr;
+    public String addrtype;
 
     @JacksonXmlProperty(isAttribute = true)
-    public String summary;
-
-    @JacksonXmlProperty(isAttribute = true)
-    public Double elapsed;
-
-    @JacksonXmlProperty(isAttribute = true)
-    public String exit;
+    public Optional<String> vendor; // Optional for MAC address vendor
 }

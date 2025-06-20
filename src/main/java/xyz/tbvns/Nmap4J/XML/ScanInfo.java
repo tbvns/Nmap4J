@@ -1,23 +1,22 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 /**
- * POJO for 'extrareasons' element. This is where the 'reason' attribute was causing issues.
- * Note the 'reason' is an attribute here.
+ * POJO for the 'scaninfo' element.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ExtraReason {
+public class ScanInfo {
     @JacksonXmlProperty(isAttribute = true)
-    public String reason;
+    public String type;
 
     @JacksonXmlProperty(isAttribute = true)
-    public Integer count;
+    public String protocol;
 
     @JacksonXmlProperty(isAttribute = true)
-    public String proto;
+    public Integer numservices;
 
     @JacksonXmlProperty(isAttribute = true)
-    public String ports;
+    public String services;
 }

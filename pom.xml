@@ -8,6 +8,10 @@
     <artifactId>Nmap4J</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>Nmap4J</name>
+    <description>Simple Nmap command line interface wrapper for Java</description>
+    <url>https://github.com/tbvns/Nmap4J</url>
+
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
@@ -36,5 +40,22 @@
             <version>1.18.38</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.13</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>

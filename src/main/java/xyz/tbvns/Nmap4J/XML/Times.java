@@ -1,19 +1,19 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 /**
- * POJO for 'hosts' element within runstats.
+ * POJO for the 'times' element.
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Hosts {
+public class Times {
     @JacksonXmlProperty(isAttribute = true)
-    public Integer up;
+    public Long srtt;
 
     @JacksonXmlProperty(isAttribute = true)
-    public Integer down;
+    public Long rttvar;
 
     @JacksonXmlProperty(isAttribute = true)
-    public Integer total;
+    public Long to;
 }

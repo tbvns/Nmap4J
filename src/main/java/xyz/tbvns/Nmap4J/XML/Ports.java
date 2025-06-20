@@ -1,4 +1,4 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
@@ -13,7 +13,7 @@ import java.util.List;
 public class Ports {
     @JacksonXmlElementWrapper(useWrapping = false) // No wrapper for extraports
     @JacksonXmlProperty(localName = "extraports")
-    public List<Extraports> extraports;
+    public List<xyz.tbvns.Nmap4J.XML.Extraports> extraports;
 
     @JacksonXmlElementWrapper(useWrapping = false) // No wrapper for port
     @JacksonXmlProperty(localName = "port")

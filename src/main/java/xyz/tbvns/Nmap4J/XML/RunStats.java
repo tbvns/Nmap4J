@@ -1,4 +1,4 @@
-package xyz.tbvns.NmapWorker.XML;
+package xyz.tbvns.Nmap4J.XML;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -12,5 +12,5 @@ public class RunStats {
     public Finished finished;
 
     @JacksonXmlProperty(localName = "hosts")
-    public Hosts hosts;
+    public xyz.tbvns.Nmap4J.XML.Hosts hosts;
 }
